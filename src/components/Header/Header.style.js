@@ -17,6 +17,11 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
+
+  &.active {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  }
 `;
 
 export const NavLogo = styled.a`

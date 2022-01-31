@@ -99,4 +99,3 @@ export const HomeSrollName = styled.span`
   font-size: ${smallerFontSize};
   transform: rotate(-90deg);
 `;
-

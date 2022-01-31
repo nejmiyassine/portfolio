@@ -1,6 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import {
   fontFamily,
+  fontMedium,
   fontSemiBold,
   fontSize,
   fontSizeH2,
@@ -66,15 +67,12 @@ export const Main = styled.main`
   padding: 4.5rem 0 1rem;
 `;
 
-export const Title = styled.h2`
-  text-align: center;
-`;
+// export const Title = styled.h2``;
 
-export const Subtitle = styled.h3`
-  text-align: center;
-`;
+// export const Subtitle = styled.span``;
 
 export const SectionTitle = styled.h2`
+  text-align: center;
   font-size: ${fontSizeH2};
   color: ${({ theme }) => theme.firstColor};
   margin-bottom: 2rem;
@@ -84,6 +82,28 @@ export const SectionSubtitle = styled.h3`
   display: block;
   font-size: ${smallFontSize};
   color: ${({ theme }) => theme.textColorLight};
+  text-align: center;
+`;
+
+export const Button = styled.a`
+  display: inline-block;
+  background-color: ${({ theme }) => theme.firstColor};
+  color: ${({ theme }) => theme.bodyColor};
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: ${fontMedium};
+  transition: 0.3s;
+
+  &.button--ghost {
+    background-color: transparent;
+    border: 2px solid ${({ theme }) => theme.firstColor};
+    color: ${({ theme }) => theme.firstColor};
+  }
+
+  &:hover {
+    background-color: ${({ theme }) => theme.firstColorAlt};
+    color: ${({ theme }) => theme.bodyColor};
+  }
 `;
 
 export default GlobalStyle;

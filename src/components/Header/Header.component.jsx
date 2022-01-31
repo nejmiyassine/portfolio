@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as Bi from 'react-icons/bi';
 import { Container } from '../GlobalStyle/GlobalStyle.style';
 import {
@@ -13,10 +13,22 @@ import {
 import { navItems } from './navItems';
 
 const Header = ({ theme, themeToggler }) => {
+  const [box, setBox] = useState(false);
+
+  const addBoxShadow = () => {
+    if (window.scrollY >= 80) {
+      setBox(true);
+    } else {
+      setBox(false);
+    }
+  };
+
+  window.addEventListener('scroll', addBoxShadow);
+
   return (
     <HeaderWrapper id='header'>
       <Container>
-        <Nav>
+        <Nav className={box ? 'active' : null}>
           <NavLogo href='/'>Yassine</NavLogo>
 
           <NavMenu>

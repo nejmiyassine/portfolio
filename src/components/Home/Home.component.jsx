@@ -1,7 +1,6 @@
 import React from 'react';
-import * as Ai from 'react-icons/ai';
 import * as Bs from 'react-icons/bs';
-import { Container, Grid } from '../GlobalStyle/GlobalStyle.style';
+import { Container, Grid, Button } from '../GlobalStyle/GlobalStyle.style';
 import {
   HomeButtons,
   HomeContainer,
@@ -14,6 +13,7 @@ import {
   HomeSroll,
   HomeSrollName,
 } from './Home.style';
+import { homeData } from './homeData';
 
 const Home = () => {
   return (
@@ -27,31 +27,23 @@ const Home = () => {
               <HomeEducation>Frontend Developer</HomeEducation>
 
               <HomeButtons>
-                <a
+                <Button
                   download=''
                   href='./assets/pdf/'
-                  className='button button--ghost'
+                  className='button--ghost'
                 >
                   Download CV
-                </a>
-                <a href='#about' className='button'>
-                  About me
-                </a>
+                </Button>
+                <Button href='#about'>About me</Button>
               </HomeButtons>
             </HomeData>
 
             <HomeSocial>
-              <HomeSocialLink href='https://www.linkedin.com/in/yassine-nejmi/'>
-                <Ai.AiFillLinkedin />
-              </HomeSocialLink>
-
-              <HomeSocialLink href='https://github.com/letsCode20'>
-                <Ai.AiFillGithub />
-              </HomeSocialLink>
-
-              <HomeSocialLink href='https://www.instagram.com/yassinecode/'>
-                <Ai.AiOutlineInstagram />
-              </HomeSocialLink>
+              {homeData.map(({ id, icon, link }) => (
+                <HomeSocialLink key={id} href={link}>
+                  {icon}
+                </HomeSocialLink>
+              ))}
             </HomeSocial>
 
             <HomeSroll href='#about'>

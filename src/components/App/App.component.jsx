@@ -5,6 +5,8 @@ import GlobalStyle from '../GlobalStyle/GlobalStyle.style';
 import Header from '../Header/Header.component';
 import { lightTheme, darkTheme } from '../../styles/theme/theme';
 import Home from '../Home/Home.component';
+import About from '../About/About.component';
+import Skills from '../Skills/Skills.component';
 
 const App = () => {
   const [theme, themeToggler, mountedComponent] = useDarkMode();
@@ -19,6 +21,8 @@ const App = () => {
       <>
         <Header themeToggler={themeToggler} theme={theme} />
         <Home />
+        <About />
+        <Skills />
       </>
     </ThemeProvider>
   );
