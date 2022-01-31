@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoints } from '../../styles/breakpoints/breakpoints';
 import { fontMedium } from '../../styles/font/font';
 import { zFixed } from '../../styles/index/index';
 
@@ -17,6 +18,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
+  background-color: ${({ theme }) => theme.bodyColor};
 
   &.active {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
@@ -36,14 +38,18 @@ export const NavLogo = styled.a`
 export const NavMenu = styled.div`
   position: fixed;
   bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
   background-color: rgba(28, 37, 54, 0.8);
   width: 90%;
   border-radius: 4rem;
-  /* padding: 1rem 2.25rem; */
-  padding: 0.5rem 1.25rem;
+  padding: 0.75rem 0.5rem;
   backdrop-filter: blur(10px);
+
+  @media (min-width: ${breakpoints.mobile}) {
+    width: 328px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
 `;
 
 export const NavList = styled.ul`
@@ -61,9 +67,21 @@ export const NavItem = styled.li`
 `;
 
 export const NavItemLink = styled.a`
-  color: ${({ theme }) => theme.textColor};
+  color: #fff;
   font-size: 1.25rem;
   padding: 0.4rem;
   display: flex;
   border-radius: 5rem;
+`;
+
+export const ChangeTheme = styled.div`
+  & svg {
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.firstColor};
+  }
 `;

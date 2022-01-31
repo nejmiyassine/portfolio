@@ -2,7 +2,6 @@ import React from 'react';
 import * as Ai from 'react-icons/ai';
 import {
   Container,
-  Grid,
   SectionSubtitle,
   SectionTitle,
 } from '../GlobalStyle/GlobalStyle.style';
@@ -23,20 +22,18 @@ const Works = () => {
 
       <Container>
         <WorkContainer>
-          <Grid>
-            {worksData.map((work) => (
-              <WorkCard key={work.id}>
-                <WorkImg src='' alt='work__img' />
-                <WorkTitle>{work.title}</WorkTitle>
-                <WorkButton href={work.demoLink}>
-                  Demo <Ai.AiOutlineArrowRight />
-                </WorkButton>
-                <WorkButton href={work.githubLink}>
-                  Github <Ai.AiFillGithub />
-                </WorkButton>
-              </WorkCard>
-            ))}
-          </Grid>
+          {worksData.map((work) => (
+            <WorkCard key={work.id}>
+              <WorkImg src={work.img} alt={work.alt} />
+              <WorkTitle>{work.title}</WorkTitle>
+              <WorkButton href={work.demoLink} target='_blank'>
+                Demo <Ai.AiOutlineArrowRight />
+              </WorkButton>
+              <WorkButton href={work.githubLink} target='_blank'>
+                Github <Ai.AiFillGithub />
+              </WorkButton>
+            </WorkCard>
+          ))}
         </WorkContainer>
       </Container>
     </section>

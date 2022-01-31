@@ -8,10 +8,11 @@ import {
   HomeEducation,
   HomeGreeting,
   HomeName,
+  HomeScroll,
+  HomeScrollLink,
+  HomeScrollName,
   HomeSocial,
   HomeSocialLink,
-  HomeSroll,
-  HomeSrollName,
 } from './Home.style';
 import { homeData } from './homeData';
 
@@ -40,16 +41,18 @@ const Home = () => {
 
             <HomeSocial>
               {homeData.map(({ id, icon, link }) => (
-                <HomeSocialLink key={id} href={link}>
+                <HomeSocialLink key={id} href={link} target='_blank'>
                   {icon}
                 </HomeSocialLink>
               ))}
             </HomeSocial>
 
-            <HomeSroll href='#about'>
-              <Bs.BsMouse />
-              <HomeSrollName>Scroll Down</HomeSrollName>
-            </HomeSroll>
+            <HomeScroll>
+              <HomeScrollLink href='#about'>
+                <Bs.BsMouse />
+                <HomeScrollName>Scroll Down</HomeScrollName>
+              </HomeScrollLink>
+            </HomeScroll>
           </Grid>
         </HomeContainer>
       </Container>

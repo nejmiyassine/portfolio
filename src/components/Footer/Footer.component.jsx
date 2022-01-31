@@ -3,6 +3,7 @@ import { Container } from '../GlobalStyle/GlobalStyle.style';
 import { homeData } from '../Home/homeData';
 import {
   FooterContainer,
+  FooterCopy,
   FooterLink,
   FooterList,
   FooterSection,
@@ -20,6 +21,9 @@ const Footer = () => {
 
           <FooterList>
             <li>
+              <FooterLink href='#home'>Home</FooterLink>
+            </li>
+            <li>
               <FooterLink href='#about'>About</FooterLink>
             </li>
             <li>
@@ -34,6 +38,11 @@ const Footer = () => {
               </FooterSocialLink>
             ))}
           </FooterSocial>
+
+          <FooterCopy>
+            &copy; NEJMI YASSINE. All rights reserved.{' '}
+            {new Date().getFullYear()}.
+          </FooterCopy>
         </FooterContainer>
       </Container>
     </FooterSection>

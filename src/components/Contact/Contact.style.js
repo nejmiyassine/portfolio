@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoints } from '../../styles/breakpoints/breakpoints';
 import {
   fontMedium,
   fontSizeH3,
@@ -14,6 +15,16 @@ export const ContactContainer = styled.div`
   display: grid;
   row-gap: 3rem;
   padding-bottom: 3rem;
+
+  @media (min-width: ${breakpoints.tablet}) {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    column-gap: 3rem;
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
+    column-gap: 6rem;
+  }
 `;
 
 export const ContactContent = styled.div``;
@@ -27,6 +38,11 @@ export const ContactTitle = styled.h3`
 export const ContactInfo = styled.div`
   display: grid;
   gap: 1rem;
+
+  @media (min-width: ${breakpoints.mobile}) {
+    grid-template-columns: 300px;
+    justify-content: center;
+  }
 `;
 
 export const ContactCard = styled.div`
@@ -82,7 +98,11 @@ export const ContactForm = styled.form`
     position: absolute;
     left: 0;
     bottom: -11rem;
-    /* margin-top: 6rem; */
+  }
+
+  @media (min-width: ${breakpoints.mobile}) {
+    width: 360px;
+    margin: 0 auto;
   }
 `;
 

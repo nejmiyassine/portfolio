@@ -9,6 +9,7 @@ import {
   HeaderWrapper,
   NavLogo,
   NavItemLink,
+  ChangeTheme,
 } from './Header.style';
 import { navItems } from './navItems';
 
@@ -31,20 +32,20 @@ const Header = ({ theme, themeToggler }) => {
         <Nav className={box ? 'active' : null}>
           <NavLogo href='/'>Yassine</NavLogo>
 
-          <NavMenu>
-            <NavList>
-              {navItems.map((item) => (
-                <NavItem key={item.id}>
-                  <NavItemLink href={`#${item.id}`}>{item.icon}</NavItemLink>
-                </NavItem>
-              ))}
-            </NavList>
-          </NavMenu>
-
-          <div onClick={themeToggler}>
+          <ChangeTheme onClick={themeToggler}>
             {theme === 'light' ? <Bi.BiMoon /> : <Bi.BiSun />}
-          </div>
+          </ChangeTheme>
         </Nav>
+
+        <NavMenu>
+          <NavList>
+            {navItems.map((item) => (
+              <NavItem key={item.id}>
+                <NavItemLink href={`#${item.id}`}>{item.icon}</NavItemLink>
+              </NavItem>
+            ))}
+          </NavList>
+        </NavMenu>
       </Container>
     </HeaderWrapper>
   );

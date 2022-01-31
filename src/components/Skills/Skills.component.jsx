@@ -26,47 +26,15 @@ const Skills = () => {
 
       <Container>
         <SkillsContainer>
-          <Grid>
-            <SkillsContent>
-              <SkillsTitle>Frontend Developer</SkillsTitle>
+          {/* <Grid> */}
+          <SkillsContent>
+            <SkillsTitle>Frontend Developer</SkillsTitle>
 
-              <SkillsBox>
-                <SkillsGroup>
-                  {frontEndSkillsData
-                    .slice(0, 3)
-                    .map(({ id, icon, name, level }) => (
-                      <SkillsData key={id}>
-                        {icon}
-                        <div>
-                          <SkillsName>{name}</SkillsName>
-                          <SkillsLevel>{level}</SkillsLevel>
-                        </div>
-                      </SkillsData>
-                    ))}
-                </SkillsGroup>
-
-                <SkillsGroup>
-                  {frontEndSkillsData
-                    .slice(3, frontEndSkillsData.length)
-                    .map(({ id, icon, name, level }) => (
-                      <SkillsData key={id}>
-                        {icon}
-                        <div>
-                          <SkillsName>{name}</SkillsName>
-                          <SkillsLevel>{level}</SkillsLevel>
-                        </div>
-                      </SkillsData>
-                    ))}
-                </SkillsGroup>
-              </SkillsBox>
-            </SkillsContent>
-
-            <SkillsContent>
-              <SkillsTitle>Backend Developer</SkillsTitle>
-
-              <SkillsBox>
-                <SkillsGroup>
-                  {backEndSkillsData.map(({ id, icon, name, level }) => (
+            <SkillsBox>
+              <SkillsGroup>
+                {frontEndSkillsData
+                  .slice(0, 3)
+                  .map(({ id, icon, name, level }) => (
                     <SkillsData key={id}>
                       {icon}
                       <div>
@@ -75,10 +43,42 @@ const Skills = () => {
                       </div>
                     </SkillsData>
                   ))}
-                </SkillsGroup>
-              </SkillsBox>
-            </SkillsContent>
-          </Grid>
+              </SkillsGroup>
+
+              <SkillsGroup>
+                {frontEndSkillsData
+                  .slice(3, frontEndSkillsData.length)
+                  .map(({ id, icon, name, level }) => (
+                    <SkillsData key={id}>
+                      {icon}
+                      <div>
+                        <SkillsName>{name}</SkillsName>
+                        <SkillsLevel>{level}</SkillsLevel>
+                      </div>
+                    </SkillsData>
+                  ))}
+              </SkillsGroup>
+            </SkillsBox>
+          </SkillsContent>
+
+          <SkillsContent>
+            <SkillsTitle>Backend Developer</SkillsTitle>
+
+            <SkillsBox>
+              <SkillsGroup>
+                {backEndSkillsData.map(({ id, icon, name, level }) => (
+                  <SkillsData key={id}>
+                    {icon}
+                    <div>
+                      <SkillsName>{name}</SkillsName>
+                      <SkillsLevel>{level}</SkillsLevel>
+                    </div>
+                  </SkillsData>
+                ))}
+              </SkillsGroup>
+            </SkillsBox>
+          </SkillsContent>
+          {/* </Grid> */}
         </SkillsContainer>
       </Container>
     </SkillsSection>

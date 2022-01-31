@@ -1,5 +1,11 @@
 import styled from 'styled-components';
-import { fontMedium, fontSize, tinyFontSize } from '../../styles/font/font';
+import { breakpoints } from '../../styles/breakpoints/breakpoints';
+import {
+  fontMedium,
+  fontSize,
+  smallFontSize,
+  tinyFontSize,
+} from '../../styles/font/font';
 
 export const SkillsSection = styled.section`
   padding: 1.5rem 0;
@@ -8,12 +14,26 @@ export const SkillsSection = styled.section`
 export const SkillsContainer = styled.div`
   row-gap: 2rem;
   padding-top: 1rem;
+  display: grid;
+
+  @media (min-width: ${breakpoints.mobile}) {
+    justify-content: center;
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
+    grid-template-columns: repeat(2, 350px);
+    column-gap: 3rem;
+  }
 `;
 
 export const SkillsContent = styled.div`
   background-color: ${({ theme }) => theme.containerColor};
   padding: 1.5rem;
   border-radius: 1.25rem;
+
+  @media (min-width: ${breakpoints.mobile}) {
+    padding: 2rem 4rem;
+  }
 `;
 
 export const SkillsTitle = styled.h3`
@@ -28,6 +48,10 @@ export const SkillsBox = styled.div`
   display: flex;
   justify-content: center;
   column-gap: 2.5rem;
+
+  @media (max-width: 320px) {
+    column-gap: 1.5rem;
+  }
 `;
 
 export const SkillsGroup = styled.div`
@@ -50,6 +74,10 @@ export const SkillsName = styled.h3`
   font-size: ${fontSize};
   font-weight: ${fontMedium};
   line-height: 18px;
+
+  @media (max-width: 320px) {
+    font-size: ${smallFontSize};
+  }
 `;
 
 export const SkillsLevel = styled.span`

@@ -22,7 +22,7 @@ export const frontEndSkillsData = [
   {
     id: 4,
     icon: <Hi.HiBadgeCheck />,
-    name: 'Tailwind CSS',
+    name: 'Tailwind',
     level: 'Intermediate',
   },
   {

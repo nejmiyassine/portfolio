@@ -47,6 +47,10 @@ export const HomeButtons = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
 `;
 
 export const HomeSocial = styled.div`
@@ -81,21 +85,24 @@ export const HomeSocialLink = styled.a`
   }
 `;
 
-export const HomeSroll = styled.a`
+export const HomeScroll = styled.div`
   position: absolute;
-  color: ${({ theme }) => theme.firstColor};
-  right: 0rem;
+  right: 0;
   bottom: 6rem;
+`;
+
+export const HomeScrollLink = styled.a`
   display: grid;
   row-gap: 2.25rem;
   justify-items: center;
+  color: ${({ theme }) => theme.firstColor};
 
   & svg {
     font-size: 1.25rem;
   }
 `;
 
-export const HomeSrollName = styled.span`
+export const HomeScrollName = styled.span`
   font-size: ${smallerFontSize};
   transform: rotate(-90deg);
 `;

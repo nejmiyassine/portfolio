@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoints } from '../../styles/breakpoints/breakpoints';
 import { smallFontSize, tinyFontSize } from '../../styles/font/font';
 
 export const AboutContainer = styled.div`
@@ -14,6 +15,15 @@ export const AboutInfo = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
   margin-bottom: 2rem;
+
+  @media (max-width: 320px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: ${breakpoints.mobile}) {
+    grid-template-columns: repeat(3, 140px);
+    justify-content: center;
+  }
 `;
 
 export const AboutBox = styled.div`
@@ -39,4 +49,8 @@ export const AboutSubtitle = styled.span`
 export const AboutDescription = styled.p`
   margin-bottom: 2rem;
   line-height: 1.4;
+
+  @media (min-width: ${breakpoints.mobile}) {
+    padding: 0 5rem;
+  }
 `;
