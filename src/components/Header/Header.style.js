@@ -11,7 +11,6 @@ export const HeaderWrapper = styled.header`
   z-index: ${zFixed};
 `;
 
-/* height: ${} */
 export const Nav = styled.nav`
   height: 50px;
   display: flex;
@@ -42,7 +41,8 @@ export const NavMenu = styled.div`
   background-color: rgba(28, 37, 54, 0.8);
   width: 90%;
   border-radius: 4rem;
-  padding: 1rem 2.25rem;
+  /* padding: 1rem 2.25rem; */
+  padding: 0.5rem 1.25rem;
   backdrop-filter: blur(10px);
 `;
 

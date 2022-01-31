@@ -7,6 +7,9 @@ import { lightTheme, darkTheme } from '../../styles/theme/theme';
 import Home from '../Home/Home.component';
 import About from '../About/About.component';
 import Skills from '../Skills/Skills.component';
+import Works from '../Works/Works.component';
+import Contact from '../Contact/Contact.component';
+import Footer from '../Footer/Footer.component';
 
 const App = () => {
   const [theme, themeToggler, mountedComponent] = useDarkMode();
@@ -23,6 +26,9 @@ const App = () => {
         <Home />
         <About />
         <Skills />
+        <Works />
+        <Contact />
+        <Footer />
       </>
     </ThemeProvider>
   );

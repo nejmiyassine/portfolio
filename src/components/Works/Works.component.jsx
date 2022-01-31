@@ -6,7 +6,14 @@ import {
   SectionSubtitle,
   SectionTitle,
 } from '../GlobalStyle/GlobalStyle.style';
-import { WorkButton, WorkCard, WorkTitle } from './Works.style';
+import {
+  WorkButton,
+  WorkCard,
+  WorkContainer,
+  WorkImg,
+  WorkTitle,
+} from './Works.style';
+import { worksData } from './worksData';
 
 const Works = () => {
   return (
@@ -15,18 +22,22 @@ const Works = () => {
       <SectionTitle>Recent Works</SectionTitle>
 
       <Container>
-        <Grid>
-          <WorkCard>
-            <img src='' alt='work__img' />
-            <WorkTitle></WorkTitle>
-            <WorkButton href='#'>
-              Demo <Ai.AiOutlineArrowRight />
-            </WorkButton>
-            <WorkButton href='#'>
-              Github <Ai.AiOutlineArrowRight />
-            </WorkButton>
-          </WorkCard>
-        </Grid>
+        <WorkContainer>
+          <Grid>
+            {worksData.map((work) => (
+              <WorkCard key={work.id}>
+                <WorkImg src='' alt='work__img' />
+                <WorkTitle>{work.title}</WorkTitle>
+                <WorkButton href={work.demoLink}>
+                  Demo <Ai.AiOutlineArrowRight />
+                </WorkButton>
+                <WorkButton href={work.githubLink}>
+                  Github <Ai.AiFillGithub />
+                </WorkButton>
+              </WorkCard>
+            ))}
+          </Grid>
+        </WorkContainer>
       </Container>
     </section>
   );
