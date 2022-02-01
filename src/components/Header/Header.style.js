@@ -19,10 +19,6 @@ export const Nav = styled.nav`
   align-items: center;
   padding: 0 10px;
   background-color: ${({ theme }) => theme.bodyColor};
-
-  &.active {
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
-  }
 `;
 
 export const NavLogo = styled.a`
@@ -72,6 +68,15 @@ export const NavItemLink = styled.a`
   padding: 0.4rem;
   display: flex;
   border-radius: 5rem;
+
+  &.active-link {
+    background: linear-gradient(
+      180deg,
+      hsla(250, 66%, 75%, 1),
+      hsla(250, 66%, 75%, 0.2)
+    );
+    box-shadow: 0 0 16px hsla(250, 66%, 75%, 0.2);
+  }
 `;
 
 export const ChangeTheme = styled.div`

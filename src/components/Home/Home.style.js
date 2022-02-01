@@ -8,12 +8,11 @@ import {
 
 export const HomeContainer = styled.div`
   position: relative;
-  height: calc(100vh - 50px);
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
   row-gap: 4.5rem;
-  padding-top: 2rem;
 `;
 
 export const HomeData = styled.div`

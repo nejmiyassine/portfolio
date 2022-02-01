@@ -18,7 +18,7 @@ import { homeData } from './homeData';
 
 const Home = () => {
   return (
-    <section className='home section' id='home'>
+    <div id='home'>
       <Container>
         <HomeContainer>
           <Grid>
@@ -28,12 +28,8 @@ const Home = () => {
               <HomeEducation>Frontend Developer</HomeEducation>
 
               <HomeButtons>
-                <Button
-                  download=''
-                  href='./assets/pdf/'
-                  className='button--ghost'
-                >
-                  Download CV
+                <Button href='#work' className='button--ghost'>
+                  My projects
                 </Button>
                 <Button href='#about'>About me</Button>
               </HomeButtons>
@@ -56,7 +52,7 @@ const Home = () => {
           </Grid>
         </HomeContainer>
       </Container>
-    </section>
+    </div>
   );
 };
 
