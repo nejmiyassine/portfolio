@@ -1,42 +1,34 @@
 import React from 'react';
-import * as Ai from 'react-icons/ai';
 import {
   Container,
   SectionSubtitle,
   SectionTitle,
 } from '../GlobalStyle/GlobalStyle.style';
-import {
-  WorkButton,
-  WorkCard,
-  WorkContainer,
-  WorkImg,
-  WorkTitle,
-} from './Works.style';
+import WorkCardContainer from '../WorkCard/WorkCardContainer.component';
 import { worksData } from './worksData';
+import { WorkSection, WorkContainer } from './Works.style';
 
 const Works = () => {
   return (
-    <section id='work'>
+    <WorkSection id='work'>
       <SectionSubtitle>My Portfolio</SectionSubtitle>
       <SectionTitle>Recent Works</SectionTitle>
 
       <Container>
         <WorkContainer>
-          {worksData.map((work) => (
-            <WorkCard key={work.id}>
-              <WorkImg src={work.img} alt={work.alt} />
-              <WorkTitle>{work.title}</WorkTitle>
-              <WorkButton href={work.demoLink} target='_blank'>
-                Demo <Ai.AiOutlineArrowRight />
-              </WorkButton>
-              <WorkButton href={work.githubLink} target='_blank'>
-                Github <Ai.AiFillGithub />
-              </WorkButton>
-            </WorkCard>
+          {worksData.map(({ id, img, alt, title, demoLink, githubLink }) => (
+            <WorkCardContainer
+              key={id}
+              img={img}
+              alt={alt}
+              title={title}
+              demoLink={demoLink}
+              githubLink={githubLink}
+            />
           ))}
         </WorkContainer>
       </Container>
-    </section>
+    </WorkSection>
   );
 };
 

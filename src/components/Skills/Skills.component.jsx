@@ -1,10 +1,10 @@
 import React from 'react';
 import {
   Container,
-  Grid,
   SectionSubtitle,
   SectionTitle,
 } from '../GlobalStyle/GlobalStyle.style';
+import SkillsDataContainer from '../SkillsData/SkillsDataContainer.component';
 import {
   SkillsSection,
   SkillsContent,
@@ -35,13 +35,12 @@ const Skills = () => {
                 {frontEndSkillsData
                   .slice(0, 3)
                   .map(({ id, icon, name, level }) => (
-                    <SkillsData key={id}>
-                      {icon}
-                      <div>
-                        <SkillsName>{name}</SkillsName>
-                        <SkillsLevel>{level}</SkillsLevel>
-                      </div>
-                    </SkillsData>
+                    <SkillsDataContainer
+                      key={id}
+                      icon={icon}
+                      name={name}
+                      level={level}
+                    />
                   ))}
               </SkillsGroup>
 
@@ -49,13 +48,12 @@ const Skills = () => {
                 {frontEndSkillsData
                   .slice(3, frontEndSkillsData.length)
                   .map(({ id, icon, name, level }) => (
-                    <SkillsData key={id}>
-                      {icon}
-                      <div>
-                        <SkillsName>{name}</SkillsName>
-                        <SkillsLevel>{level}</SkillsLevel>
-                      </div>
-                    </SkillsData>
+                    <SkillsDataContainer
+                      key={id}
+                      icon={icon}
+                      name={name}
+                      level={level}
+                    />
                   ))}
               </SkillsGroup>
             </SkillsBox>
