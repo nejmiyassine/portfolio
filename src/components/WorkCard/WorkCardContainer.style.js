@@ -19,6 +19,10 @@ export const WorkCard = styled.div`
 export const WorkImg = styled.img`
   border-radius: 1rem;
   margin-bottom: 0.75rem;
+  height: 200px;
+  max-width: 295px;
+  width: 100%;
+  object-fit: cover;
 
   @media (min-width: ${breakpoints.mobile}) {
     width: 295px;

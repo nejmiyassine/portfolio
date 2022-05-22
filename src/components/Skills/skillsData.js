@@ -5,13 +5,13 @@ export const frontEndSkillsData = [
     id: 1,
     icon: <Hi.HiBadgeCheck />,
     name: 'HTML',
-    level: 'Basic',
+    level: 'Intermediate',
   },
   {
     id: 2,
     icon: <Hi.HiBadgeCheck />,
     name: 'CSS',
-    level: 'Advanced',
+    level: 'Intermediate',
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ export const frontEndSkillsData = [
   {
     id: 6,
     icon: <Hi.HiBadgeCheck />,
-    name: 'Git',
+    name: 'Apollo',
     level: 'Intermediate',
   },
 ];
@@ -43,19 +43,19 @@ export const backEndSkillsData = [
   {
     id: 7,
     icon: <Hi.HiBadgeCheck />,
-    name: 'PHP',
+    name: 'Node JS',
     level: 'Intermediate',
   },
   {
     id: 8,
     icon: <Hi.HiBadgeCheck />,
-    name: 'MySQL',
+    name: 'MongoDB',
     level: 'Intermediate',
   },
   {
     id: 9,
     icon: <Hi.HiBadgeCheck />,
-    name: 'Laravel',
+    name: 'GraphQL',
     level: 'Basic',
   },
 ];
