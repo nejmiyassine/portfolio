@@ -38,9 +38,8 @@ const About = () => {
               </AboutInfo>
 
               <AboutDescription>
-                Frontend Developer, I create web pages with React and PHP. I
-                have experience with many clients are happy with the project
-                carried out.
+                Frontend Developer, I create responsive web applications with
+                React and Redux.
               </AboutDescription>
 
               <Button href='#contact'>Contact Me</Button>
