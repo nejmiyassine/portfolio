@@ -34,7 +34,7 @@ export const frontEndSkillsData = [
   {
     id: 6,
     icon: <Hi.HiBadgeCheck />,
-    name: 'Apollo',
+    name: 'Typescript',
     level: 'Intermediate',
   },
 ];
@@ -56,6 +56,12 @@ export const backEndSkillsData = [
     id: 9,
     icon: <Hi.HiBadgeCheck />,
     name: 'GraphQL',
+    level: 'Basic',
+  },
+  {
+    id: 10,
+    icon: <Hi.HiBadgeCheck />,
+    name: 'Mysql',
     level: 'Basic',
   },
 ];

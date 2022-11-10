@@ -1,3 +1,4 @@
+import Blog from '../../assets/Blog.png';
 import Ecommerce from '../../assets/Ecommerce.png';
 import Dashboard from '../../assets/Dashboard.png';
 import BooksCRUD from '../../assets/BooksCRUD.png';
@@ -5,6 +6,14 @@ import BooksCRUD from '../../assets/BooksCRUD.png';
 export const worksData = [
   {
     id: 1,
+    img: Blog,
+    title: 'Blog Web App',
+    alt: 'blog-app',
+    githubLink: 'https://github.com/nejmiyassine/blog-app',
+    demoLink: 'https://github.com/nejmiyassine/blog-app',
+  },
+  {
+    id: 2,
     img: Ecommerce,
     title: 'Ecommerce Store',
     alt: 'ecommerce-store',
@@ -12,7 +21,7 @@ export const worksData = [
     demoLink: 'https://ecom-store.netlify.app/',
   },
   {
-    id: 2,
+    id: 3,
     img: Dashboard,
     title: 'Admin Dashboard',
     alt: 'admin-dashboard',
@@ -20,7 +29,7 @@ export const worksData = [
     demoLink: 'https://admin-dashboard-react1.netlify.app/',
   },
   {
-    id: 3,
+    id: 4,
     img: BooksCRUD,
     title: 'Books CRUD',
     alt: 'books-crud',
