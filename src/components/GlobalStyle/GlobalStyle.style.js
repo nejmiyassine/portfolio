@@ -1,11 +1,11 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import {
-  fontFamily,
-  fontMedium,
-  fontSemiBold,
-  fontSize,
-  fontSizeH2,
-  smallFontSize,
+    bigFontSize,
+    fontFamily,
+    fontMedium,
+    fontSemiBold,
+    fontSize,
+    smallFontSize,
 } from '../../styles/font/font';
 import { breakpoints } from '../../styles/breakpoints/breakpoints';
 
@@ -67,6 +67,21 @@ const GlobalStyle = createGlobalStyle`
     height: auto;
   }
 
+  .li-icon-circle1 {
+    stroke-width: 1;
+    stroke: ${({ theme }) => theme.firstColor};
+  }
+
+  .li-icon-circle2 {
+    stroke-width: 1;
+    fill: #fff;
+  }
+
+  .li-icon-circle3 {
+    stroke-width: 1;
+    fill: ${({ theme }) => theme.firstColor};
+  }
+
   @media (min-width: ${breakpoints.desktop}) {
     section {
       padding: 6.5rem 0 1rem;
@@ -75,64 +90,65 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  margin: 0 auto;
-  padding: 0 0.75rem;
+    margin: 0 auto;
+    padding: 0 0.75rem;
 
-  @media (min-width: ${breakpoints.desktop}) {
-    max-width: ${breakpoints.desktop};
-  }
+    @media (min-width: ${breakpoints.desktop}) {
+        max-width: ${breakpoints.desktop};
+    }
 
-  @media (min-width: ${breakpoints.tablet}) {
-    max-width: ${breakpoints.tablet};
-  }
+    @media (min-width: ${breakpoints.tablet}) {
+        max-width: ${breakpoints.tablet};
+    }
 `;
 
 export const Grid = styled.div`
-  display: grid;
-  gap: 1.25rem;
+    display: grid;
+    gap: 1.25rem;
 `;
 
 export const Main = styled.main`
-  padding: 4.5rem 0 1rem;
+    padding: 4.5rem 0 1rem;
 `;
 
 export const SectionTitle = styled.h2`
-  text-align: center;
-  font-size: ${fontSizeH2};
-  color: ${({ theme }) => theme.firstColor};
-  margin-bottom: 2rem;
+    text-align: center;
+    font-size: ${bigFontSize};
+    color: ${({ theme }) => theme.firstColor};
+    margin-bottom: 2rem;
+    font-weight: bold;
 
-  @media (min-width: ${breakpoints.desktop}) {
-    margin-bottom: 3.5rem;
-  }
+    @media (min-width: ${breakpoints.desktop}) {
+        margin-bottom: 3.5rem;
+    }
 `;
 
 export const SectionSubtitle = styled.h3`
-  display: block;
-  font-size: ${smallFontSize};
-  color: ${({ theme }) => theme.textColorLight};
-  text-align: center;
+    display: block;
+    font-size: ${smallFontSize};
+    color: ${({ theme }) => theme.textColorLight};
+    text-align: center;
 `;
 
 export const Button = styled.a`
-  display: inline-block;
-  background-color: ${({ theme }) => theme.firstColor};
-  color: ${({ theme }) => theme.bodyColor};
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-  font-weight: ${fontMedium};
-  transition: 0.3s;
-
-  &.button--ghost {
-    background-color: transparent;
-    border: 2px solid ${({ theme }) => theme.firstColor};
-    color: ${({ theme }) => theme.firstColor};
-  }
-
-  &:hover {
-    background-color: ${({ theme }) => theme.firstColorAlt};
+    display: inline-block;
+    background-color: ${({ theme }) => theme.firstColor};
     color: ${({ theme }) => theme.bodyColor};
-  }
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: ${fontMedium};
+    transition: 0.3s;
+
+    &.button--ghost {
+        background-color: transparent;
+        border: 2px solid ${({ theme }) => theme.firstColor};
+        color: ${({ theme }) => theme.firstColor};
+    }
+
+    &:hover {
+        background-color: ${({ theme }) => theme.firstColorAlt};
+        color: ${({ theme }) => theme.bodyColor};
+    }
 `;
 
 export default GlobalStyle;

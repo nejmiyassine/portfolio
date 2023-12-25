@@ -1,67 +1,55 @@
 import * as Hi from 'react-icons/hi';
 
 export const frontEndSkillsData = [
-  {
-    id: 1,
-    icon: <Hi.HiBadgeCheck />,
-    name: 'HTML',
-    level: 'Intermediate',
-  },
-  {
-    id: 2,
-    icon: <Hi.HiBadgeCheck />,
-    name: 'CSS',
-    level: 'Intermediate',
-  },
-  {
-    id: 3,
-    icon: <Hi.HiBadgeCheck />,
-    name: 'Javascript',
-    level: 'Intermediate',
-  },
-  {
-    id: 4,
-    icon: <Hi.HiBadgeCheck />,
-    name: 'Tailwind',
-    level: 'Intermediate',
-  },
-  {
-    id: 5,
-    icon: <Hi.HiBadgeCheck />,
-    name: 'React JS',
-    level: 'Intermediate',
-  },
-  {
-    id: 6,
-    icon: <Hi.HiBadgeCheck />,
-    name: 'Typescript',
-    level: 'Intermediate',
-  },
+    {
+        icon: <Hi.HiBadgeCheck size={16} />,
+        name: 'HTML',
+    },
+    {
+        icon: <Hi.HiBadgeCheck size={16} />,
+        name: 'CSS',
+    },
+    {
+        icon: <Hi.HiBadgeCheck size={16} />,
+        name: 'Tailwind',
+    },
+    {
+        icon: <Hi.HiBadgeCheck size={16} />,
+        name: 'Javascript',
+    },
+    {
+        icon: <Hi.HiBadgeCheck size={16} />,
+        name: 'Typescript',
+    },
+    {
+        icon: <Hi.HiBadgeCheck size={16} />,
+        name: 'React JS',
+    },
+    {
+        icon: <Hi.HiBadgeCheck size={16} />,
+        name: 'Redux',
+    },
 ];
 
 export const backEndSkillsData = [
-  {
-    id: 7,
-    icon: <Hi.HiBadgeCheck />,
-    name: 'Node JS',
-    level: 'Intermediate',
-  },
-  {
-    id: 8,
-    icon: <Hi.HiBadgeCheck />,
-    name: 'MongoDB',
-    level: 'Intermediate',
-  },
-  {
-    id: 9,
-    icon: <Hi.HiBadgeCheck />,
-    name: 'GraphQL',
-    level: 'Basic',
-  },
-  {
-    id: 10,
-    icon: <Hi.HiBadgeCheck />,
-    name: 'Mysql',
-    level: 'Basic',
-  },
+    {
+        icon: <Hi.HiBadgeCheck size={16} />,
+        name: 'Node JS',
+    },
+    {
+        icon: <Hi.HiBadgeCheck size={16} />,
+        name: 'MongoDB',
+    },
+    {
+        icon: <Hi.HiBadgeCheck size={16} />,
+        name: 'GraphQL',
+    },
+    {
+        icon: <Hi.HiBadgeCheck size={16} />,
+        name: 'Mysql',
+    },
+    {
+        icon: <Hi.HiBadgeCheck size={16} />,
+        name: 'Git',
+    },
 ];

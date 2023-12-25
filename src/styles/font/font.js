@@ -11,6 +11,7 @@ export const tinyFontSize = '.625rem';
 
 export const fontMedium = 500;
 export const fontSemiBold = 600;
+export const fontBold = 700;
 
 // @media screen and(min - width: ${ breakpoints.desktop }) {
 // export const bigFontSize = '2.5rem';

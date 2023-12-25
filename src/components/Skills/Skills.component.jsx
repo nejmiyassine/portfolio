@@ -1,86 +1,73 @@
 import React from 'react';
-import {
-  Container,
-  SectionSubtitle,
-  SectionTitle,
-} from '../GlobalStyle/GlobalStyle.style';
+
 import SkillsDataContainer from '../SkillsData/SkillsDataContainer.component';
-import {
-  SkillsSection,
-  SkillsContent,
-  SkillsData,
-  SkillsBox,
-  SkillsGroup,
-  SkillsLevel,
-  SkillsName,
-  SkillsTitle,
-  SkillsContainer,
-} from './Skills.style';
 import { frontEndSkillsData, backEndSkillsData } from './skillsData';
 
+import {
+    Container,
+    SectionSubtitle,
+    SectionTitle,
+} from '../GlobalStyle/GlobalStyle.style';
+import {
+    SkillsSection,
+    SkillsContent,
+    SkillsBox,
+    SkillsGroup,
+    SkillsTitle,
+    SkillsContainer,
+} from './Skills.style';
+
 const Skills = () => {
-  return (
-    <SkillsSection id='skills'>
-      <SectionSubtitle>My Abilities</SectionSubtitle>
-      <SectionTitle>My Experience</SectionTitle>
+    return (
+        <SkillsSection id='skills'>
+            <SectionSubtitle>My Abilities</SectionSubtitle>
+            <SectionTitle>My Skills</SectionTitle>
 
-      <Container>
-        <SkillsContainer>
-          {/* <Grid> */}
-          <SkillsContent>
-            <SkillsTitle>Frontend Developer</SkillsTitle>
+            <Container>
+                <SkillsContainer>
+                    {/* <Grid> */}
+                    <SkillsContent>
+                        <SkillsTitle>Frontend</SkillsTitle>
 
-            <SkillsBox>
-              <SkillsGroup>
-                {frontEndSkillsData
-                  .slice(0, 3)
-                  .map(({ id, icon, name, level }) => (
-                    <SkillsDataContainer
-                      key={id}
-                      icon={icon}
-                      name={name}
-                      level={level}
-                    />
-                  ))}
-              </SkillsGroup>
+                        <SkillsBox>
+                            <SkillsGroup>
+                                {frontEndSkillsData.map(
+                                    ({ icon, name, level }, idx) => (
+                                        <SkillsDataContainer
+                                            key={idx}
+                                            icon={icon}
+                                            name={name}
+                                            level={level}
+                                        />
+                                    )
+                                )}
+                            </SkillsGroup>
+                        </SkillsBox>
+                    </SkillsContent>
 
-              <SkillsGroup>
-                {frontEndSkillsData
-                  .slice(3, frontEndSkillsData.length)
-                  .map(({ id, icon, name, level }) => (
-                    <SkillsDataContainer
-                      key={id}
-                      icon={icon}
-                      name={name}
-                      level={level}
-                    />
-                  ))}
-              </SkillsGroup>
-            </SkillsBox>
-          </SkillsContent>
+                    <SkillsContent>
+                        <SkillsTitle>Backend</SkillsTitle>
 
-          <SkillsContent>
-            <SkillsTitle>Backend Developer</SkillsTitle>
-
-            <SkillsBox>
-              <SkillsGroup>
-                {backEndSkillsData.map(({ id, icon, name, level }) => (
-                  <SkillsData key={id}>
-                    {icon}
-                    <div>
-                      <SkillsName>{name}</SkillsName>
-                      <SkillsLevel>{level}</SkillsLevel>
-                    </div>
-                  </SkillsData>
-                ))}
-              </SkillsGroup>
-            </SkillsBox>
-          </SkillsContent>
-          {/* </Grid> */}
-        </SkillsContainer>
-      </Container>
-    </SkillsSection>
-  );
+                        <SkillsBox>
+                            <SkillsGroup>
+                                {backEndSkillsData.map(
+                                    ({ icon, name, level }, idx) => (
+                                        <SkillsDataContainer
+                                            key={idx}
+                                            icon={icon}
+                                            name={name}
+                                            level={level}
+                                        />
+                                    )
+                                )}
+                            </SkillsGroup>
+                        </SkillsBox>
+                    </SkillsContent>
+                    {/* </Grid> */}
+                </SkillsContainer>
+            </Container>
+        </SkillsSection>
+    );
 };
 
 export default Skills;
