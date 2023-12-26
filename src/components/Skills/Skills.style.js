@@ -44,6 +44,7 @@ export const SkillsBox = styled.div`
     justify-content: center;
     column-gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     @media (max-width: 320px) {
         column-gap: 1.5rem;
@@ -55,7 +56,6 @@ export const SkillsGroup = styled.div`
     align-content: flex-start;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 `;
 
 export const SkillsData = styled.div`
