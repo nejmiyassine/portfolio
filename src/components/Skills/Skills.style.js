@@ -25,6 +25,7 @@ export const SkillsContent = styled.div`
     background-color: ${({ theme }) => theme.containerColor};
     padding: 1.5rem;
     border-radius: 1.25rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     @media (min-width: ${breakpoints.mobile}) {
         padding: 2rem 4rem;
@@ -44,7 +45,6 @@ export const SkillsBox = styled.div`
     justify-content: center;
     column-gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     @media (max-width: 320px) {
         column-gap: 1.5rem;
