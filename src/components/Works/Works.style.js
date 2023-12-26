@@ -8,11 +8,7 @@ export const WorkContainer = styled.div`
     display: grid;
     justify-content: center;
     row-gap: 3rem;
-
-    @media (min-width: ${breakpoints.tablet}) {
-        grid-template-columns: repeat(2, max-content);
-        column-gap: 3rem;
-    }
+    grid-template-columns: repeat(1, 1fr);
 
     @media (min-width: ${breakpoints.desktop}) {
         gap: 3rem;

@@ -17,7 +17,17 @@ const Works = () => {
             <Container>
                 <WorkContainer>
                     {worksData.map(
-                        ({ img, alt, title, demoLink, githubLink }, idx) => (
+                        (
+                            {
+                                img,
+                                alt,
+                                title,
+                                demoLink,
+                                githubLink,
+                                technologies,
+                            },
+                            idx
+                        ) => (
                             <WorkCardContainer
                                 key={idx}
                                 img={img}
@@ -25,6 +35,7 @@ const Works = () => {
                                 title={title}
                                 demoLink={demoLink}
                                 githubLink={githubLink}
+                                technologies={technologies}
                             />
                         )
                     )}
